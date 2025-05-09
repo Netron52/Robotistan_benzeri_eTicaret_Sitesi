@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arduino | Ana Sayfa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .renk {
+      background-color: #EF4136;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    .logo {
+      width: 200px;
+      margin-top: 15px;
+    }
+    .btnrenk {
+      background-color: #EF4136;
+      color: white;
+    }
+    .btnrenk:hover {
+      background-color: #EF4136;
+      color: white;
+    }
+    .btnrenk2 {
+      background-color: #094870;
+      color: white;
+    }
+    .btnrenk2:hover {
+      background-color: #094870;
+      color: white;
+    }
+    .metin {
+      text-align: center;
+      border-radius: 5px;
+      margin-left: 10px;
+      color: black;
+    }
+    .sepet {
+      text-decoration: none;
+      color: white;
+      background-color: #EF4136;
+      width: 136px;
+      height: 35px;
+      text-align: center;
+      border-radius: 15px;
+      font-size: 20px;
+      line-height: 35px;
+      margin-left: 15px;
+    }
+    .sepet:hover {
+      color: white;
+    }
+    .w530 {
+      width: 530px;
+    }
+    .arama {
+      width: 23px;
+    }
+    .rsm {
+      width: 30px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .btnboy {
+      width: 300px;
+    }
+    .gHeader {
+      background-color: #EF4136;
+      color: white;
+      height: 50px;
+      text-align: center;
+    }
+    .lang-currency {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 10px;
+    }
+    .nav-link:hover{
+        color: #EF4136;
+    }
+    .altmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Araları biraz daha açıldı */
+  padding: 10px 0;
+}
+.altmenu a,
+.altmenu .dropdown {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.navbar2 {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px 0;
+}
+
+.navbar2 .form-control,
+.navbar2 .btn {
+  height: 38px;
+}
+
+.navbar2 .nav-link,
+.navbar2 .dropdown-toggle,
+.navbar2 .sepet {
+  margin-left: 20px;
+}
+
+.navbar2 .logo {
+  width: 180px;
+  margin-right: 30px;
+}
+
+.altmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 10px 0;
+}
+
+.altmenu a,
+.altmenu .dropdown {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .navbar2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .navbar2 form {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar2 .form-control {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+  .navbar2 .btn {
+    width: 100%;
+  }
+}
+
+.text {
+    font-size: 24px; /* Yazı boyutu */
+    margin-right: 15px; /* Çizgi ile yazı arasındaki boşluk */
+    display: inline-block; /* Yazının yan yana olabilmesi için */
+}
+
+.line {
+    border: none;
+    border-top: 2px solid red; /* Çizgi rengi ve kalınlığı */
+    width: 1063px; /* Çizgi uzunluğu */
+    display: inline-block; /* Çizginin de aynı satırda yer alabilmesi için */
+    vertical-align: middle; /* Çizgi ile yazının aynı hizada olmasını sağlar */
+}
+
+.ürün{
+    width: 250px;
+}
+
+/* Ürün Kartları Düzeni */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;  /* Kartların hepsi aynı yükseklikte olur */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e53935;
+    margin-top: 10px;
+}
+
+.product-rating {
+    color: #ffb300;
+    margin-top: 5px;
+}
+
+.product-desc {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+    flex-grow: 1;  /* Ürün açıklaması alanını büyütür, böylece her kart aynı yüksekliği alır */
+}
+
+.btn-add-to-cart {
+    background-color: #EF4136; /* Buton rengi EF4136 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner{
+  width: 1300px;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #D33F2E; /* Hover rengi, biraz daha koyu */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .product-card {
+        margin: 0 auto;
+    }
+}
+.btn-cart {
+  background-color: #EF4136;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cart:hover {
+  background-color: #c93228; /* Aynı tonun koyusu */
+}
+
+</style>
+</head>
+<body>
+
+  <div class="container-fluid renk">1250 TL ve Üzeri Siparişlerde Kargo Ücretsiz!</div>
+
+  <div class="container">
+  <!-- ÜST NAVBAR (container içinde) -->
+  <nav class="navbar navbar-expand-lg navbar2">
+    <div class="container d-flex align-items-center flex-wrap justify-content-between">
+  
+      <a href="index.html"><img src="resimler/logo.png" class="logo" alt=""></a>
+  
+      <form action="" class="d-flex mx-3 flex-wrap">
+        <input class="form-control me-2 w530" type="search" placeholder="Aradığınız ürün, kategori veya markayı yazınız.">
+        <button class="btn btnrenk" type="submit"><img src="resimler/search.png" class="arama" alt=""></button>
+      </form>
+  
+      <div class="d-flex align-items-center flex-wrap">
+        <a class="nav-link dropdown-toggle metin" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+          Giriş Yap
+        </a>
+        <ul class="dropdown-menu hareket" aria-labelledby="navbarDropdown">
+          <li class="gHeader"><h6 class="text-center mb-2">Giriş Yap</h6></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><input type="text" class="form-control" placeholder="Kullanıcı Adı"></li>
+          <li><input type="password" class="form-control" placeholder="Şifre"></li>
+          <li><button class="btn btnrenk btnboy">Giriş Yap</button></li>
+          <li><button class="btn btnrenk2 btnboy">Kayıt Ol</button></li>
+        </ul>
+  
+        <a class="nav-link" href="#"><img src="resimler/bildirim.png" class="rsm" alt=""></a>
+  
+        <a href="sepet.html" class="sepet">Sepetim</a>
+      </div>
+  
+    </div>
+  </nav>
+
+  <!-- ALT MENÜ (ORTALANMIŞ ve BOŞLUKLU) -->
+<div class="bg-light py-2 shadow-sm">
+    <div class="container">
+      <div class="altmenu">
+        
+        <!-- Tüm Kategoriler -->
+        <div class="dropdown">
+          <button class="btn btnrenk dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Tüm Kategoriler
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Kategori 1</a></li>
+            <li><a class="dropdown-item" href="#">Kategori 2</a></li>
+            <li><a class="dropdown-item" href="#">Kategori 3</a></li>
+          </ul>
+        </div>
+  
+        <!-- Diğer Menü Linkleri -->
+        <a href="#" class="nav-link">Yeni Ürünler</a>
+        <a href="#" class="nav-link">Blog</a>
+        <a href="#" class="nav-link">Sana Özel</a>
+        <a href="#" class="nav-link">Outlet</a>
+        <a href="#" class="nav-link">Kurumsal Satış</a>
+        <a href="#" class="nav-link">Arıza Kaydı</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="resimler/slayt1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="resimler/slayt2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="resimler/slayt3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<br>
+  
+<div class="container py-5">
+  <h2 class="mb-4 text-center">Popüler Ürünler</h2>
+  <div class="row g-4">
+    
+    <div class="col-md-3 col-sm-6">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Ürün 1">
+        <div class="product-title">AlphaBoard Geliştirme Kartı</div>
+        <div class="product-price">₺499,99</div>
+        <p>Geliştirme projeleriniz için ideal, uygun fiyatlı ve kompakt bir çözüm.</p>
+        <button class="btn btn-cart">Sepete Ekle</button>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Ürün 2">
+        <div class="product-title">BetaPrint 3D Yazıcı</div>
+        <div class="product-price">₺9.299,00</div>
+        <p>Kompakt tasarımıyla ev tipi 3D baskı deneyimi sunar.</p>
+        <button class="btn btn-cart">Sepete Ekle</button>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Ürün 3">
+        <div class="product-title">Gamma Sensor Seti</div>
+        <div class="product-price">₺749,00</div>
+        <p>Çeşitli sensörler içeren başlangıç seti. Eğitim için ideal.</p>
+        <button class="btn btn-cart">Sepete Ekle</button>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Ürün 4">
+        <div class="product-title">Delta Devre Kartı</div>
+        <div class="product-price">₺289,99</div>
+        <p>Projelerinize uygun çok amaçlı devre kartı.</p>
+        <button class="btn btn-cart">Sepete Ekle</button>
+      </div>
+    </div>
+
+  </div>
+</div> 
+
+</div>
+<!-- Footer Başlangıcı -->
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Sol Kısım: İletişim ve Hakkında -->
+      <div class="col-md-4 mb-3">
+        <h5 class="text-uppercase">Hakkında</h5>
+        <p>Elektronik ürünlerde en yeni teknolojilerle donatılmış en uygun fiyatlı seçenekler.</p>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">İletişim</a></li>
+          <li><a href="#" class="text-white">Hakkımızda</a></li>
+          <li><a href="#" class="text-white">Yardım</a></li>
+        </ul>
+      </div>
+
+      <!-- Orta Kısım: Sosyal Medya Bağlantıları -->
+      <div class="col-md-4 mb-3 text-center">
+        <h5 class="text-uppercase">Bizi Takip Edin</h5>
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+
+      <!-- Sağ Kısım: İletişim Bilgileri -->
+      <div class="col-md-4 mb-3 text-end">
+        <h5 class="text-uppercase">İletişim</h5>
+        <p>Email: destek@elektronikmagaza.com</p>
+        <p>Telefon: +90 123 456 78 90</p>
+        <p>Adres: Örnek Mah. No:10, İstanbul, Türkiye</p>
+      </div>
+    </div>
+
+    <!-- Alt Kısım: Telif Hakkı -->
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p class="mb-0">&copy; 2025 Elektronik Mağaza. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer Bitişi -->
+</body>
+</html>
